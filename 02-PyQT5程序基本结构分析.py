@@ -12,19 +12,25 @@ app = QApplication(sys.argv)
 # 当我们创建一个控件后，如果说，这个控件没有父控件，则把它当作顶层控件（窗口）
 # 系统会自动给窗口添加一些装饰（标题栏），窗口控件具备一些特性（设置标题，图标）
 window = QWidget()
+window.resize(400, 400)
+
 # window = QPushButton()
 # window = QLabel()
 # 2.2 设置控件
 # window.setText("hello")
-window.setWindowTitle("hello")
+# window.setWindowTitle("hello")
 
 # 控件也可以作为一个容器（承载其他的控件）
-label = QLabel()
+label = QLabel(window)
 label.setText("xxx")
-label.show()
+label.move(100, 50)
+# label.setWindowTitle("xxxxxxxxxx")
+# label.show()
 # 2.3 展示控件
 # 刚创建好一个控件后，（这个控件没有什么父控件），默认不会被展示，
 # 只有手动的调用show（）才可以
+# 如果说这个控件有父控件，在一般情况下，父控件展示之后，子控件会自动展示
+
 window.show()
 
 
